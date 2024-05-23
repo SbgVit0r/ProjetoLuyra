@@ -1,0 +1,39 @@
+{
+    "encomendas_web": [
+        {
+            "cliente": "Joao",
+            "produto": "Camisola",
+            "qtd": 2,
+            "valor": 40,
+            "total": 0
+        },
+        {
+            "cliente": "Pedro",
+            "produto": "Camisola",
+            "qtd": 5,
+            "valor": 40,
+            "total": 0
+        },
+        {
+            "cliente": "Augusto",
+            "produto": "Calça",
+            "qtd": 8,
+            "valor": 30,
+            "total": 0
+        },
+        {
+            "cliente": "Maria",
+            "produto": "Regata",
+            "qtd": 4,
+            "valor": 35,
+            "total": 0
+        },
+        {
+            "cliente": "João",
+            "produto": "Camiseta",
+            "qtd": 3,
+            "valor": 50,
+            "total": 0    
+        }
+    ]
+}
