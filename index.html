@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sir Fazendo Arte</title>
+</head>
+<body>
+    <!--Cabeçalho do site-->
+    <header>
+        <img class="logo" src="imagens/logo.png" alt="">
+    </header>
+
+    <h1 class="encomendas" id="titulo" onclick="this.innerHTML ='Muito bom dia!'">Encomendas</h1>
+    <label for="filtrar-tabela" class="filtro">Filtrar:</label>
+    <input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o nome do cliente">
+
+    <hr>
+
+    <!--Tabela de produtos-->   
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Produto</th>
+            <th>Quantidade</th>
+            <th>Valor Unitário</th>
+            <th>Total</th>
+        </tr>
+        <tr class="cliente">
+            <td class="info-nome">Mariana</td>
+            <td class="info-produto">Camiseta</td>
+            <td class="info-qtd">5</td>
+            <td class="info-valor">50</td>
+            <td class="info-total"></td>
+        </tr>
+        <tr class="cliente">
+            <td class="info-nome">Carolina</td>
+            <td class="info-produto">Camisola</td>
+            <td class="info-qtd">3</td>
+            <td class="info-valor">40</td>
+            <td class="info-total"></td>
+            
+        </tr>
+        <tr class="cliente">
+            <td class="info-nome">Daniele</td>
+            <td class="info-produto">Calça</td>
+            <td class="info-qtd">7</td>
+            <td class="info-valor">30</td>
+            <td class="info-total"></td>
+            
+        </tr>
+        <tr class="cliente">
+            <td class="info-nome">Felipe</td>
+            <td class="info-produto">Regata </td>
+            <td class="info-qtd">5</td>
+            <td class="info-valor">35</td>
+            <td class="info-total"></td>
+        </tr>
+    </table>
+
+    <button id="buscar-encomendas">Buscar Encomendas</button>
+
+    <section class="sessao_adicionar">
+
+        <!--Formulário de inclusão de encomendass-->
+        <h2 class="encomendas__novo">Adicionar nova encomenda</h2>
+
+        <!--Exibe os erros de validação-->
+        <ul id="mensagens-erro"></ul>
+         <form id="form-adiciona" class="formulario" action="" method="post">
+
+                <div class="grupo">
+                    <label class="texto-campo" for="nome">Nome:</label><br>
+                    <input type="text" name="nome" id="cliente" placeholder="Digite o nome do(a) cliente">
+                </div>
+
+                <div class="grupo">
+                    <label class="texto-campo" for="nome">Quantidade:</label><br>
+                    <input type="number" name="nome" id="qtd" placeholder="Digite a quantidade encomendada">
+                </div>
+
+                <div class="grupo2">
+                    <label class="texto-campo" for="nome">Produto:</label><br>
+                    <select class="selecionador" name="nome" id="produto" placeholder="Selecione">
+                        <option value="Calça">Calça</option>
+                        <option value="Camiseta">Camiseta</option>
+                        <option value="Camisola">Camisola</option>
+                        <option value="Regata">Regata</option>
+                    </select>
+                </div>
+
+                <div class="grupo2">
+                    <label class="texto-campo" for="nome">Valor Unitário:</label><br>
+                    <input type="number" name="nome" id="valor" placeholder="Digite o valor unitario do produto">
+                </div>
+                <button id="adicionar-encomenda" type="submit">Adicionar</button>
+
+            </form>
+            
+
+        <script src="scripts/calculaTotal.js" defer></script>
+        <script src="scripts/adicionar_item.js" defer></script>
+        <script src="scripts/filtrar.js"></script>
+        <script src="scripts/buscar-encomendas.js"></script>
+    </section>
+</body>
+</html>

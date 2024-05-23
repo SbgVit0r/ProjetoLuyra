@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*{
+    font-family: 'Lato', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    height: 100vh;
+}
+
+header{
+    background-color: rgb(22, 22, 206);
+    display: flex;
+    padding:0.5%;
+    padding-left: 3%;
+}
+
+.logo{
+    width: 6%;
+    border-radius: 60%;
+}
+
+.encomendas {
+    padding-left: 100px;
+    padding-top: 41px;
+    font-size: 2.8rem;
+}
+
+table{
+    padding-top: 3%;
+    width: 100%;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+td, th{
+    padding:5px;
+    border: 3px solid #ddd; 
+}
+
+th{
+    background-color: #ddd;
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+hr{
+    margin-top: 40px;
+    margin-left: 5.1%;
+    margin-right: 5.1%;
+    border: 2px solid #ddd;
+}
+
+.encomendas__novo{
+    padding-left: 100px;
+    padding-top: 41px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+button{
+    margin-top: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: blue;
+    box-shadow: 10px 0 0;
+    border-radius: 6px;
+    font-weight: 900;
+    color: white;
+    font-size: 1.2rem;
+}
+
+input{
+    padding:6px;
+    margin-top:6px;
+    width: 12%;
+}
+
+.formulario{
+    padding-top: 1.2%;
+    padding-left: 5%;
+}
+
+.texto-campo{
+    padding-bottom: 5px;
+}
+
+.selecionador{
+    padding:7px;
+    margin-top:6px;
+}
+
+.grupo{
+    display: block;
+    margin:6px;
+}
+
+.grupo2{
+    margin:6px;
+    display: block;
+}
+
+#mensagens-erro{
+    color: red;
+    margin-left: 80px;
+}
+
+.fadeOut{
+    opacity:0;
+    transition: 1s;
+}
+
+#filtrar-tabela{
+    width:11%;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+.filtro{
+    display: block;
+}
