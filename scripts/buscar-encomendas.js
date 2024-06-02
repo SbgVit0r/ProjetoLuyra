@@ -1,26 +1,41 @@
+// Seleciona o botão "Buscar Encomendas"
 var botaoBuscar = document.querySelector("#buscar-encomendas");
-var nomeCliente = document.querySelector(".info-nome");
 
-botaoBuscar.addEventListener("click", function(){
-    var xhr = new XMLHttpRequest();
+// Adiciona um ouvinte de evento para o clique no botão
+botaoBuscar.addEventListener("click", function() {
+    // Função para transformar e renderizar os dados
+    function renderData(data) {
+        const tableBody = document.querySelector('table');
 
-    xhr.open("GET", "https://fakestoreapi.com/products");
-    xhr.addEventListener("load", function(){
-        var resposta = xhr.responseText;
-        
-        var encomendas = JSON.parse(resposta);
-        
-        encomendas.forEach(function(encomenda){
-            if(!clienteExiste()){
-                addEncomenda(encomenda);
-            } 
-        })
+        data.forEach(item => {
+            const total = formataValor(item.preco * item.quantidade);
+            const row = `<tr>
+                <td>${item.customerName}</td>
+                <td>${item.produto}</td>
+                <td>${item.quantidade}</td>
+                <td>${formataValor(item.preco)}</td>
+                <td>${total}</td>
+            </tr>`;
+            tableBody.innerHTML += row;
+        });
+    }
 
-    });
-    xhr.send();
-})
+    // Função para buscar dados da FakeStoreAPI
+    async function fetchData() {
+        const response = await fetch('https://fakestoreapi.com/products');
+        const products = await response.json();
 
-function clienteExiste(){
+        // Transformando dados
+        const transformedData = products.map(produto => ({
+            customerName: "Cliente", // FakeStoreAPI não fornece nomes de clientes
+            produto: produto.title,
+            quantidade: 1, // Quantidade padrão, ajustar conforme necessário
+            preco: produto.price
+        }));
 
-    
-}
+        renderData(transformedData);
+    }
+
+    // Chama a função de buscar dados
+    fetchData();
+});
