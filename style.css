@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 *{
     font-family: 'Lato', sans-serif;
     margin: 0px;
@@ -11,7 +11,7 @@ body{
 }
 
 header{
-    background-color: rgb(22, 22, 206);
+    background-color: lightgreen;
     display: flex;
     padding:0.5%;
     padding-left: 3%;
@@ -26,6 +26,13 @@ header{
     padding-left: 62px;
     padding-top: 41px;
     font-size: 2.8rem;
+}
+
+.titulo{
+    font-family: "Open Sans", sans-serif;
+    padding-top:20px;
+    text-indent: 55rem;
+
 }
 
 table{
@@ -124,5 +131,8 @@ input{
 }
 
 .filtro{
-    display: block;
+  display: block;
+  padding-left: 65px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
